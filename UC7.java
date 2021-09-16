@@ -12,7 +12,7 @@ public class UC7 {
 			static int Player1=0;
 			static int Player2=0;
 			
-			static int calculatePlayerValue(int PlayerPos,int dicenum) {
+			static int calculatePlayer(int PlayerPos,int dicenum) {
 				Random rand = new Random();
 				int choice = rand.nextInt(3);
 				//System.out.println(choice);
@@ -50,10 +50,10 @@ public class UC7 {
 						String str;
 						Scanner sc = new Scanner(System.in);
 						if(currentPlayer==1) {
-							System.out.println("\nFIRST PLAYER TURN");
+							System.out.println("\nFirst Player Turn");
 						}
 						else {
-							System.out.println("\nSecond PLAYER TURN");
+							System.out.println("\nSecond Player Turn");
 						}
 						// TODO Auto-generated method stub
 						System.out.println("Enter d to roll dice");
@@ -63,9 +63,9 @@ public class UC7 {
 						System.out.println("Dice number=" +dicenum);
 						System.out.println("Number of throws to win : "+ count++);
 						if(currentPlayer==1) {
-							Player1 = calculatePlayerValue(Player1,dicenum);
-							System.out.println("First Player :: " + Player1);
-							System.out.println("Second Player :: " + Player2);
+							Player1 = calculatePlayer(Player1,dicenum);
+							System.out.println("First Player - " + Player1);
+							System.out.println("Second Player - " + Player2);
 							if(Player1==100)
 							{
 								System.out.println("\nFirst player wins");
@@ -74,9 +74,9 @@ public class UC7 {
 						}
 					else
 					{
-						Player2 = calculatePlayerValue(Player2,dicenum);
-						System.out.println("First Player :: " + Player1);
-						System.out.println("Second Player :: " + Player2);
+						Player2 = calculatePlayer(Player2,dicenum);
+						System.out.println("First Player - " + Player1);
+						System.out.println("Second Player - " + Player2);
 						if(Player2==100)
 						{
 							System.out.println("\nSecond player wins");
